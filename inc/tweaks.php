@@ -32,3 +32,28 @@ function disable_emojicons_tinymce( $plugins ) {
 }
 
 add_filter( 'emoji_svg_url', '__return_false' );
+
+// remove version from head
+remove_action('wp_head', 'wp_generator');
+
+// remove version from rss
+add_filter('the_generator', '__return_empty_string');
+
+// remove version from scripts and styles
+function quechalen_remove_version_scripts_styles($src) {
+  if (strpos($src, 'ver=')) {
+    $src = remove_query_arg('ver', $src);
+  }
+  return $src;
+}
+add_filter('style_loader_src', 'quechalen_remove_version_scripts_styles', 9999);
+add_filter('script_loader_src', 'quechalen_remove_version_scripts_styles', 9999);
+
+// block proxy visits @ http://m0n.co/01
+function quechalen_block_proxy_visits() {
+  if (@fsockopen($_SERVER['REMOTE_ADDR'], 80, $errstr, $errno, 1)) {
+    die('Proxy access not allowed');
+  }
+}
+add_action('after_setup_theme', 'quechalen_block_proxy_visits');
+
