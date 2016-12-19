@@ -1,0 +1,35 @@
+// Settings
+@import "settings-global";
+
+// Mixins
+@import "bourbon";
+@import "breakpoint";
+@import "susy";
+
+// Generic
+@import "generic-box-sizing";
+@import "generic-normalize";
+@import "generic-reset";
+@import "generic-shared";
+
+// Navigation
+
+.menu {
+
+  li {
+    text-transform: uppercase;
+    font-family: $font-lato;
+    font-weight: 700;
+    font-size: rem(16);
+  }
+
+  a {
+    color: $color-white;
+
+    &:hover,
+    &:focus {
+      color: $color-beige;
+    }
+  }
+
+}

@@ -1,0 +1,33 @@
+// Typography
+$base-font-size:    16px !default;
+$base-line-height:  24px !default;
+$base-spacing-unit: round($base-line-height) !default;
+
+// Colors
+
+$color-blue          : #094fa3;
+$color-black         : #333;
+$color-white         : #FFF;
+$color-text-brown    : #581004;
+$color-brown         : #5b0e02;
+$color-light-brown   : #dbcfc2;
+$color-text-blue     : #3b5998;
+$color-text-green    : #416902;
+$color-green-top     : #e5ed6e;
+$color-green-bottom  : #5f901d;
+$color-green-toph    : lighten($color-green-top, 5%);
+$color-green-bottomh : darken($color-green-bottom, 5%);
+$color-beige         : #e2d7c8;
+
+// Fonts
+$font-base     : Arial, Helvetica, sans-serif;
+$font-dancing  : 'Dancing Script', cursive;
+$font-lato     : 'Lato', $font-base;
+$font-fugaz    : 'Fugaz One', cursive;
+
+// Breakpoints
+
+$bp-small: max-width 47.9375em;
+$bp-large: 48em;
+// $bp-tablet: 64em; // 1024  pixels
+// $bp-tablet: 64.0625em; // 1025  pixels
