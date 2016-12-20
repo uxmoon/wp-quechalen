@@ -102,7 +102,7 @@ add_action( 'widgets_init', 'quechalen_widgets_init' );
  * Enqueue scripts and styles.
  */
 function quechalen_scripts() {
-	wp_enqueue_style( 'quechalen-style', get_stylesheet_uri() );
+	// wp_enqueue_style( 'quechalen-style', get_stylesheet_uri() );
   wp_enqueue_style( 'quechalen-fonts', 'https://fonts.googleapis.com/css?family=Dancing+Script|Fugaz+One|Lato:400,700,900' );
 	wp_enqueue_style( 'quechalen-theme', get_template_directory_uri() . '/css/app.css' );
 

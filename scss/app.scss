@@ -12,23 +12,58 @@
 @import "generic-reset";
 @import "generic-shared";
 
+// Elements
+@import "page";
+
 // Slick
 @import "slick";
 @import "slick-theme";
 
+
+// Header
+
+.site-title {
+  // image replacement
+  border:0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background-color: transparent;
+  // image
+  background-image: url('../images/ui.png');
+  width: 256px;
+  height: 71px;
+
+  a {
+    display: block;
+    width: 256px;
+    height: 71px;
+  }
+}
+
 // Navigation
 
 .menu {
+  list-style-type: none;
+  margin: 0;
+  @include clearfix;
 
   li {
+    float: left;
+    margin-right: $base-spacing-unit;
     text-transform: uppercase;
     font-family: $font-lato;
     font-weight: 700;
     font-size: rem(16);
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   a {
     color: $color-white;
+    text-decoration: none;
 
     &:hover,
     &:focus {
@@ -36,4 +71,9 @@
     }
   }
 
+}
+
+// Theme
+body {
+  background-color: $color-beige;
 }
