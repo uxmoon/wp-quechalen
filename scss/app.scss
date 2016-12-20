@@ -19,8 +19,16 @@
 @import "slick";
 @import "slick-theme";
 
+// Accessibility
+@import "accessibility";
+
 
 // Header
+
+.site-header {
+  @include container;
+  position: relative;
+}
 
 .site-title {
   // image replacement
@@ -33,6 +41,9 @@
   background-image: url('../images/ui.png');
   width: 256px;
   height: 71px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: rem(10);
 
   a {
     display: block;
@@ -53,6 +64,8 @@
   background-position: -16px -71px;
   width: 232px;
   height: 16px;
+  margin-left: auto;
+  margin-right: auto;
 
   a {
     display: block;
@@ -64,12 +77,15 @@
 // Navigation
 
 .menu {
-  list-style-type: none;
   margin: 0;
+  padding-top: rem(10);
+  padding-bottom: rem(10);
+  list-style-type: none;
+  text-align: center;
   @include clearfix;
 
   li {
-    float: left;
+    display: inline-block;
     margin-right: $base-spacing-unit;
     text-transform: uppercase;
     font-family: $font-lato;
@@ -91,6 +107,41 @@
     }
   }
 
+  @include breakpoint($bp-large) {
+    border-top: 1px solid $color-white;
+    border-bottom: 1px solid $color-white;
+  }
+
+}
+
+// Language Switcher
+
+.c-language {
+  list-style-type: none;
+  margin: 0;
+
+  li {
+    display: inline-block;
+    font-family: $font-lato;
+    font-size: rem(13);
+    font-weight: 700;
+  }
+
+  a {
+    color: $color-white;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $color-beige;
+    }
+  }
+
+  @include breakpoint($bp-large) {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
 
 // Theme
