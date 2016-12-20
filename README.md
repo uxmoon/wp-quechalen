@@ -17,7 +17,6 @@ Quechalen Mountain Inn and cabins WordPress theme using underscores starter them
 - Sass
 - Susy
 - Breakpoint Sass
-- Susy
 - Sourcemaps
 - Autoprefixer
 
@@ -27,10 +26,11 @@ Quechalen Mountain Inn and cabins WordPress theme using underscores starter them
 - Lato
 - Fugaz One
 
-## Tweaks
+## WordPress and plugin Tweaks
 
-- Contact form 7, autop, css and js
+- Contact form 7, remove autop, css and js
 - Removed emoji from head section
+- Disabled comments globally
 
 ## Plugins
 
