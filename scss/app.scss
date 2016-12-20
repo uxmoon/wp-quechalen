@@ -146,6 +146,10 @@ body {
   }
 
   @include breakpoint($bp-large) {
+    position: relative;
+    z-index: 1;
+    margin-top: -30px;
+
     li {
       display: inline-block;
 
@@ -169,6 +173,8 @@ body {
   @include container;
   @include clearfix;
   text-align: center;
+  padding-top: $base-spacing-unit;
+  padding-bottom: $base-spacing-unit;
 
   @include breakpoint($bp-large) {
     text-align: left;
@@ -195,5 +201,23 @@ body {
 
   }
 
+}
+
+// site content
+
+.site-content {
+  position: relative;
+
+  @include breakpoint($bp-large) {
+    .c-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-image: url('../images/bg-footer.png');
+      background-repeat: repeat-x;
+      width: 100%;
+      height: 237px;
+    }
+  }
 
 }
