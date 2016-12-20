@@ -25,6 +25,12 @@
 @import "accessibility";
 
 
+// Site
+
+.site {
+  padding-top: $base-spacing-unit;
+}
+
 // Header
 
 .site-header {
@@ -100,6 +106,7 @@
   }
 
   @include breakpoint($bp-large) {
+    margin-bottom: $base-spacing-unit;
     border-top: 1px solid $color-white;
     border-bottom: 1px solid $color-white;
   }
@@ -209,6 +216,8 @@ body {
   position: relative;
 
   @include breakpoint($bp-large) {
+    padding-bottom: 240px;
+
     .c-bottom {
       position: absolute;
       bottom: 0;
@@ -220,4 +229,25 @@ body {
     }
   }
 
+}
+
+.site-main {
+  @include container;
+}
+
+
+// Page: Home
+
+.page-template-home {
+
+  .entry-content {
+    text-align: center;
+    font-family: $font-dancing;
+    color: $color-white;
+    font-size: rem(20);
+
+    @include breakpoint($bp-large) {
+      font-size: rem(40);
+    }
+  }
 }
