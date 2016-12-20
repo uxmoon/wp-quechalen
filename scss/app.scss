@@ -14,6 +14,8 @@
 
 // Elements
 @import "page";
+@import "elements-links";
+@import "elements-icons";
 
 // Slick
 @import "slick";
@@ -97,16 +99,6 @@
     }
   }
 
-  a {
-    color: $color-white;
-    text-decoration: none;
-
-    &:hover,
-    &:focus {
-      color: $color-beige;
-    }
-  }
-
   @include breakpoint($bp-large) {
     border-top: 1px solid $color-white;
     border-bottom: 1px solid $color-white;
@@ -127,16 +119,6 @@
     font-weight: 700;
   }
 
-  a {
-    color: $color-white;
-    text-decoration: none;
-
-    &:hover,
-    &:focus {
-      color: $color-beige;
-    }
-  }
-
   @include breakpoint($bp-large) {
     position: absolute;
     top: 0;
@@ -147,4 +129,71 @@
 // Theme
 body {
   background-color: $color-beige;
+}
+
+
+// Footer
+
+.site-info-contact {
+  margin: 0;
+  list-style-type: none;
+  text-align: center;
+
+  li {
+    font-size: rem(13);
+    color: $color-white;
+    line-height: $base-line-height;
+  }
+
+  @include breakpoint($bp-large) {
+    li {
+      display: inline-block;
+
+      &::after {
+        display: inline-block;
+        content: "\2014";
+        color: $color-white;
+        margin-left: rem(5);
+        margin-right: rem(5);
+      }
+
+      &:last-child::after {
+        content: "";
+      }
+    }
+  }
+
+}
+
+.site-info {
+  @include container;
+  @include clearfix;
+  text-align: center;
+
+  @include breakpoint($bp-large) {
+    text-align: left;
+  }
+
+  span {
+    color: $color-text-brown;
+    font-size: rem(12);
+
+    @include breakpoint($bp-large) {
+      float: left;
+    }
+  }
+
+  a {
+    display: block;
+    color: $color-text-blue;
+    text-decoration: none;
+    font-size: rem(12);
+
+    @include breakpoint($bp-large) {
+      float: right;
+    }
+
+  }
+
+
 }
