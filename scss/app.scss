@@ -41,6 +41,26 @@
   }
 }
 
+.site-description {
+  // image replacement
+  border:0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background-color: transparent;
+  // image
+  background-image: url('../images/ui.png');
+  background-position: -16px -71px;
+  width: 232px;
+  height: 16px;
+
+  a {
+    display: block;
+    width: 232px;
+    height: 16px;
+  }
+}
+
 // Navigation
 
 .menu {
