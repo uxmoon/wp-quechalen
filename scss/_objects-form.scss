@@ -1,0 +1,84 @@
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="submit"],
+textarea {
+  width: 100%;
+  margin-bottom: $base-spacing-unit / 2;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $color-brown;
+  font-size: rem(14);
+  padding: rem(9) rem(14);
+  background-color: $color-white;
+}
+
+textarea {
+  min-height: 134px;
+}
+
+input[type="submit"] {
+  border-width: 0;
+  cursor: pointer;
+  font-family: $font-fugaz;
+  font-size: rem(20);
+  color: $color-text-green;
+  @include linear-gradient($color-green-top, $color-green-bottom);
+  padding-top: rem(5);
+  padding-bottom: rem(5);
+  border-radius: 5px;
+  text-shadow: 0 1px 0 rgba($color-white, 0.7);
+
+  &:hover, &:focus {
+    @include linear-gradient($color-green-toph, $color-green-bottomh);
+    outline: none;
+  }
+}
+
+form select {
+  background-color: $color-white;
+  border: 1px solid $color-brown;
+}
+
+
+::-webkit-input-placeholder {
+   color: $color-text-brown;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $color-text-brown;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $color-text-brown;
+}
+
+:-ms-input-placeholder {
+   color: $color-text-brown;
+}
+
+.o-form {
+  @include clearfix;
+}
+
+.o-form ul {
+  list-style-type: none;
+  margin: 0;
+
+  li {
+    display: inline-block;
+    margin-right: $base-spacing-unit;
+  }
+}
+
+.o-form label {
+  display: block;
+}
+
+@include breakpoint($bp-large) {
+
+  .o-form__column {
+    @include span(6 of 12);
+  }
+
+}
