@@ -59,6 +59,22 @@ p {
 
 .site-main {
   @include container;
+
+  @include breakpoint($bp-mobile-only) {
+    margin-left: gutter();
+    margin-right: gutter();
+  }
+}
+
+.entry-title {
+  font-size: rem(35);
+  font-family: $font-dancing;
+  font-weight: 400;
+  color: $color-white;
+
+  @include breakpoint($bp-large) {
+    font-size: rem(70);
+  }
 }
 
 
