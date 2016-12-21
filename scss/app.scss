@@ -82,32 +82,6 @@
   }
 }
 
-
-// Language Switcher
-
-.c-language {
-  position: absolute;
-  top: 0;
-  left: 0;
-  list-style-type: none;
-  margin: 0;
-
-
-
-  @include breakpoint($bp-large) {
-    left: auto;
-    right: 0;
-  }
-
-  li {
-    display: inline-block;
-    font-family: $font-lato;
-    font-size: rem(13);
-    font-weight: 700;
-  }
-
-}
-
 // Theme
 body {
   background-color: $color-beige;
@@ -231,3 +205,4 @@ body {
 // components
 
 @import "components-anchor-nav";
+@import "components-language";

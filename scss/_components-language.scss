@@ -1,0 +1,28 @@
+// Language Switcher
+
+.c-language {
+
+  list-style-type: none;
+  margin: 0;
+
+  @include breakpoint($bp-mobile-only) {
+    position: fixed;
+    bottom: 20px;
+    left: 5%;
+    z-index: 2;
+  }
+
+  @include breakpoint($bp-large) {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  li {
+    display: inline-block;
+    font-family: $font-lato;
+    font-size: rem(13);
+    font-weight: 700;
+  }
+
+}
