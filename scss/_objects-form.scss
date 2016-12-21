@@ -13,6 +13,13 @@ textarea {
   background-color: $color-white;
 }
 
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  box-shadow: inset 2px 2px 5px rgba(0,0,0,0.5)
+}
+
 textarea {
   min-height: 134px;
 }
@@ -75,10 +82,15 @@ form select {
   display: block;
 }
 
+.o-form__column {
+  margin-bottom: $base-spacing-unit;
+}
+
 @include breakpoint($bp-large) {
 
   .o-form__column {
     @include span(6 of 12);
+    margin-bottom: 0;
   }
 
 }

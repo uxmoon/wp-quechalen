@@ -77,6 +77,12 @@ p {
   }
 }
 
+.entry-content {
+  background-color: rgba($color-brown, 0.8);
+  padding: gutter() * 2;
+  color: $color-white;
+}
+
 
 // Page: Home
 
