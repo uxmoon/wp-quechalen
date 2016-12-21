@@ -111,6 +111,29 @@ p {
   display: none !important;
 }
 
+.c-contact-list {
+  margin: 0;
+  list-style-type: none;
+  text-align: center;
+  li {
+    display: inline-block;
+    font-size: rem(24);
+    font-family: $font-dancing;
+
+    &::after {
+      display: inline-block;
+      content: "\2014";
+      color: $color-white;
+      margin-left: rem(10);
+      margin-right: rem(5);
+    }
+
+    &:last-child::after {
+      content: "";
+    }
+  }
+}
+
 
 
 
