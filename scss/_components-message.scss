@@ -1,0 +1,82 @@
+// Component Message
+
+.c-message {
+  margin-left: gutter();
+  margin-right: gutter();
+}
+
+.c-message__title {
+  @include clearfix;
+  background-color: $color-white;
+  color: $color-text-brown;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+
+
+  @include breakpoint($bp-mobile-only) {
+    .c-message__title-image {
+      text-align: center;
+    }
+  }
+
+
+  @include breakpoint($bp-large) {
+
+    .c-message__title-image {
+      @include span(4 of 12);
+      text-align: center;
+    }
+
+    .c-message__title-copy {
+      @include span(8 of 12);
+      padding-top: $base-spacing-unit;
+    }
+
+  }
+
+}
+
+
+// rem
+.c-message__title-copy {
+  font-size: rem(14);
+  line-height: $base-line-height;
+
+  @include breakpoint($bp-mobile-only) {
+    padding-left: gutter();
+    padding-right: gutter();
+  }
+
+}
+
+.c-message__content {
+  @include clearfix;
+  padding-top: $base-spacing-unit;
+  padding-bottom: $base-spacing-unit;
+  padding-left: gutter();
+  padding-right: gutter();
+  background-color: $color-brown;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.c-message__copy {
+  color: $color-white;
+}
+
+
+@include breakpoint($bp-mobile-only) {
+  .c-message__image {
+    text-align: center;
+  }
+}
+
+@include breakpoint($bp-large) {
+  .c-message__image {
+    @include span(4 of 12);
+  }
+
+  .c-message__copy {
+    @include span(8 of 12);
+  }
+}

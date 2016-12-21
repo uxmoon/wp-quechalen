@@ -1,0 +1,70 @@
+// Footer
+
+.site-info-contact {
+  margin: 0;
+  list-style-type: none;
+  text-align: center;
+
+  li {
+    font-size: rem(13);
+    color: $color-white;
+    line-height: $base-line-height;
+  }
+
+  @include breakpoint($bp-large) {
+    position: relative;
+    z-index: 1;
+    margin-top: -30px;
+
+    li {
+      display: inline-block;
+
+      &::after {
+        display: inline-block;
+        content: "\2014";
+        color: $color-white;
+        margin-left: rem(5);
+        margin-right: rem(5);
+      }
+
+      &:last-child::after {
+        content: "";
+      }
+    }
+  }
+
+}
+
+.site-info {
+  @include container;
+  @include clearfix;
+  text-align: center;
+  padding-top: $base-spacing-unit;
+  padding-bottom: $base-spacing-unit;
+
+  @include breakpoint($bp-large) {
+    text-align: left;
+  }
+
+  span {
+    color: $color-text-brown;
+    font-size: rem(12);
+
+    @include breakpoint($bp-large) {
+      float: left;
+    }
+  }
+
+  a {
+    display: block;
+    color: $color-text-blue;
+    text-decoration: none;
+    font-size: rem(12);
+
+    @include breakpoint($bp-large) {
+      float: right;
+    }
+
+  }
+
+}

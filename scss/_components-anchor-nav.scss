@@ -4,12 +4,12 @@
   position: fixed;
   bottom: 20px;
   right: 5%;
-  z-index: 2;
+  z-index: 3;
   margin: 0;
   padding: $base-spacing-unit / 2;
 
-  border-width: 0;
-  border-radius: 3px;
+  border: 1px solid $color-white;
+  border-radius: 5px;
   background-color: $color-brown;
   color: $color-white;
   font-size: rem(14);
@@ -37,7 +37,7 @@
       margin: 0;
       list-style-type: none;
       position: fixed;
-      z-index: 1;
+      z-index: 2;
       width: 90%;
       max-width: 400px;
       right: 5%;

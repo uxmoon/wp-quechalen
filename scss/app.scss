@@ -31,132 +31,9 @@
   padding-top: $base-spacing-unit;
 }
 
-// Header
-
-.site-header {
-  @include container;
-  position: relative;
-}
-
-.site-title {
-  // image replacement
-  border:0;
-  font: 0/0 a;
-  text-shadow: none;
-  color: transparent;
-  background-color: transparent;
-  // image
-  background-image: url('../images/ui.png');
-  width: 256px;
-  height: 71px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: rem(10);
-
-  a {
-    display: block;
-    width: 256px;
-    height: 71px;
-  }
-}
-
-.site-description {
-  // image replacement
-  border:0;
-  font: 0/0 a;
-  text-shadow: none;
-  color: transparent;
-  background-color: transparent;
-  // image
-  background-image: url('../images/ui.png');
-  background-position: -16px -71px;
-  width: 232px;
-  height: 16px;
-  margin-left: auto;
-  margin-right: auto;
-
-  a {
-    display: block;
-    width: 232px;
-    height: 16px;
-  }
-}
-
-// Theme
-body {
-  background-color: $color-beige;
-}
-
-
-// Footer
-
-.site-info-contact {
-  margin: 0;
-  list-style-type: none;
-  text-align: center;
-
-  li {
-    font-size: rem(13);
-    color: $color-white;
-    line-height: $base-line-height;
-  }
-
-  @include breakpoint($bp-large) {
-    position: relative;
-    z-index: 1;
-    margin-top: -30px;
-
-    li {
-      display: inline-block;
-
-      &::after {
-        display: inline-block;
-        content: "\2014";
-        color: $color-white;
-        margin-left: rem(5);
-        margin-right: rem(5);
-      }
-
-      &:last-child::after {
-        content: "";
-      }
-    }
-  }
-
-}
-
-.site-info {
-  @include container;
-  @include clearfix;
-  text-align: center;
-  padding-top: $base-spacing-unit;
-  padding-bottom: $base-spacing-unit;
-
-  @include breakpoint($bp-large) {
-    text-align: left;
-  }
-
-  span {
-    color: $color-text-brown;
-    font-size: rem(12);
-
-    @include breakpoint($bp-large) {
-      float: left;
-    }
-  }
-
-  a {
-    display: block;
-    color: $color-text-blue;
-    text-decoration: none;
-    font-size: rem(12);
-
-    @include breakpoint($bp-large) {
-      float: right;
-    }
-
-  }
-
+p {
+  font-size: rem(14);
+  line-height: $base-line-height;
 }
 
 // site content
@@ -187,22 +64,99 @@ body {
 
 // Page: Home
 
-.page-template-home {
+.u-text-featured {
+  margin-bottom: $base-spacing-unit;
+  text-align: center;
+  font-family: $font-dancing;
+  color: $color-white;
+  font-size: rem(20);
 
-  .entry-content {
-    text-align: center;
-    font-family: $font-dancing;
-    color: $color-white;
-    font-size: rem(20);
-
-    @include breakpoint($bp-large) {
-      font-size: rem(40);
-    }
+  @include breakpoint($bp-large) {
+    font-size: rem(40);
   }
 }
+
+.u-text-cursive {
+  font-family: $font-dancing;
+  font-size: rem(20);
+}
+
+.u-clearfix {
+  @include clearfix;
+}
+
+// Component Box
+
+.c-box {
+  @include span(12);
+  margin-bottom: $base-spacing-unit;
+  padding: $base-spacing-unit;
+
+  background-color: $color-brown;
+  border-radius: 5px;
+  color: $color-white;
+  font-size: rem(14);
+
+  @include breakpoint($bp-large) {
+    @include span(6 of 12);
+    background-image: url('../images/c-box-bg.png');
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-top: 2rem;
+    min-height: 226px;
+  }
+}
+
+.c-box__image {
+  text-align: center;
+  margin-bottom: $base-spacing-unit / 2;
+
+  @include breakpoint($bp-large) {
+    float: left;
+    margin-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+.c-box__copy {
+  font-family: $font-lato;
+
+  strong {
+    display: block;
+    padding-bottom: rem(5);
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 1px solid $color-white;
+
+    @include breakpoint($bp-large) {
+      border-width: 0;
+    }
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  .icon {
+    width: 1.5em;
+    height: 1.5em;
+    position: relative;
+    top: 6px;
+  }
+
+}
+
+
+
+
+
 
 
 // components
 
+@import "site-header";
+@import "site-footer";
 @import "components-anchor-nav";
 @import "components-language";
+@import "components-message";

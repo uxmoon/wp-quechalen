@@ -1,0 +1,50 @@
+// Header
+
+.site-header {
+  @include container;
+  position: relative;
+}
+
+.site-title {
+  // image replacement
+  border:0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background-color: transparent;
+  // image
+  background-image: url('../images/ui.png');
+  width: 256px;
+  height: 71px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: rem(10);
+
+  a {
+    display: block;
+    width: 256px;
+    height: 71px;
+  }
+}
+
+.site-description {
+  // image replacement
+  border:0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background-color: transparent;
+  // image
+  background-image: url('../images/ui.png');
+  background-position: -16px -71px;
+  width: 232px;
+  height: 16px;
+  margin-left: auto;
+  margin-right: auto;
+
+  a {
+    display: block;
+    width: 232px;
+    height: 16px;
+  }
+}
