@@ -77,9 +77,11 @@ p {
   font-family: $font-dancing;
   font-weight: 400;
   color: $color-white;
+  text-align: center;
 
   @include breakpoint($bp-large) {
     font-size: rem(70);
+    text-align: left;
   }
 }
 
@@ -87,6 +89,10 @@ p {
   background-color: rgba($color-brown, 0.8);
   padding: gutter() * 2;
   color: $color-white;
+
+  .home & {
+    background-color: transparent;
+  }
 
   @include breakpoint($bp-large) {
     .page-template-home & {
@@ -127,6 +133,7 @@ p {
 }
 
 .c-contact-list {
+  display: none;
   margin: 0;
   list-style-type: none;
   text-align: center;
@@ -143,6 +150,8 @@ p {
   }
 
   @include breakpoint($bp-large) {
+
+    display: block;
 
     li {
       display: inline-block;
@@ -177,6 +186,7 @@ p {
 @import "components-language";
 @import "components-message";
 @import "components-box";
+@import "components-location";
 
 // objects
 
@@ -187,6 +197,10 @@ p {
 .page-template {
   background-repeat: no-repeat;
   background-position: top center;
+
+  @include breakpoint($bp-mobile-only) {
+    background-size: cover;
+  }
 }
 
 .page-template-home {
