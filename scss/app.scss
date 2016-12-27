@@ -44,12 +44,18 @@ p {
   @include breakpoint($bp-large) {
     padding-bottom: 240px;
 
+    // different padding because the bg image has a different height
+    .page-template-cabins & {
+      padding-bottom: 130px;
+    }
+
     .c-bottom {
       position: absolute;
       bottom: 0;
       left: 0;
       background-image: url('../images/bg-footer.png');
-      background-repeat: repeat-x;
+      background-repeat: no-repeat;
+      background-position: bottom center;
       width: 100%;
       height: 237px;
     }
@@ -81,6 +87,12 @@ p {
   background-color: rgba($color-brown, 0.8);
   padding: gutter() * 2;
   color: $color-white;
+
+  @include breakpoint($bp-large) {
+    .page-template-home & {
+      background-color: transparent;
+    }
+  }
 }
 
 
@@ -92,6 +104,9 @@ p {
   font-family: $font-dancing;
   color: $color-white;
   font-size: rem(20);
+  background-color: rgba($color-black, 0.7);
+  padding-top: $base-spacing-unit / 2;
+  padding-bottom: $base-spacing-unit / 2;
 
   @include breakpoint($bp-large) {
     font-size: rem(40);
@@ -166,3 +181,46 @@ p {
 // objects
 
 @import "objects-form";
+
+
+// background images
+.page-template {
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.page-template-home {
+  background-image: url('../images/bg/bg-home.jpg');
+}
+
+.page-template-cabins {
+  background-image: url('../images/bg/bg-cabins.jpg');
+}
+
+.page-template-contact {
+  background-image: url('../images/bg/bg-contact.jpg');
+}
+
+.page-template-facilities {
+  background-image: url('../images/bg/bg-facilities.jpg');
+}
+
+.page-template-inn {
+  background-image: url('../images/bg/bg-inns.jpg');
+}
+
+.page-template-location {
+  background-image: url('../images/bg/bg-location.jpg');
+}
+
+.page-template-promotions {
+  background-image: url('../images/bg/bg-promotions.jpg');
+}
+
+.page-template-rates {
+  background-image: url('../images/bg/bg-rates.jpg');
+}
+
+.c-message {
+  display: none;
+}
