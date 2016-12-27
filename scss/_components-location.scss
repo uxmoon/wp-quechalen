@@ -1,6 +1,17 @@
-.c-location {}
-.c-location__content {}
-.c-location__map {}
+.c-location {
+
+}
+
+.c-location__content {
+
+}
+
+.c-location__map {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+}
 
 @include breakpoint($bp-large) {
 
@@ -12,6 +23,15 @@
   }
   .c-location__map {
     @include span(8 of 12);
+
+    iframe {
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
   }
 
 }

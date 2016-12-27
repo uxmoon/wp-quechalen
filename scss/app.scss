@@ -89,15 +89,27 @@ p {
   background-color: rgba($color-brown, 0.8);
   padding: gutter() * 2;
   color: $color-white;
+  border-radius: $base-border-radius;
 
   .home & {
     background-color: transparent;
   }
 
   @include breakpoint($bp-large) {
+
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: gutter();
+    padding-bottom: gutter();
+
     .page-template-home & {
       background-color: transparent;
     }
+  }
+
+  h2, h3, h4, h5, h6 {
+    font-family: $font-dancing;
+    font-weight: 400;
   }
 }
 
