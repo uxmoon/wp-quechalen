@@ -1,0 +1,111 @@
+# Copyright (C) 2016 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Quechalen Cabins Theme 0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2016-12-28 14:56-0300\n"
+"PO-Revision-Date: 2016-12-28 14:58-0300\n"
+"Last-Translator: Martin Luna <uxmoon@gmail.com>\n"
+"Language-Team: UX Moon <uxmoon@gmail.com>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: esc_html_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: bower_components\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
+"X-Poedit-SearchPathExcluded-2: inc/meta-box.php\n"
+"X-Poedit-SearchPathExcluded-3: js\n"
+
+# @ _s
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "No se encontró la pagina."
+
+# @ _s
+#: 404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+# @ _s
+#: 404.php:33
+msgid "Most Used Categories"
+msgstr ""
+
+# @ _s
+#: comments.php:40 comments.php:61
+msgid "Comment navigation"
+msgstr ""
+
+# @ _s
+#: comments.php:78
+msgid "Comments are closed."
+msgstr ""
+
+# @ _s
+#: header.php:70
+msgid "Skip to content"
+msgstr "Saltear al contenido"
+
+#: header.php:95
+msgid "Menu"
+msgstr "Menú"
+
+#: page-templates/rates.php:25 page-templates/rates.php:41
+msgid "Low occupancy"
+msgstr "Temporada baja"
+
+#: page-templates/rates.php:28 page-templates/rates.php:61
+msgid "Cabins"
+msgstr "Cabañas"
+
+#: page-templates/rates.php:30 page-templates/rates.php:43
+#: page-templates/rates.php:46 page-templates/rates.php:63
+#: page-templates/rates.php:74 page-templates/rates.php:77
+msgid "2 guests"
+msgstr "2 personas"
+
+#: page-templates/rates.php:33 page-templates/rates.php:49
+#: page-templates/rates.php:66 page-templates/rates.php:80
+msgid "3 guests"
+msgstr "3 personas"
+
+#: page-templates/rates.php:36 page-templates/rates.php:52
+#: page-templates/rates.php:69 page-templates/rates.php:83
+msgid "4 guests"
+msgstr "4 personas"
+
+#: page-templates/rates.php:39 page-templates/rates.php:72
+msgid "Inn"
+msgstr "Posada"
+
+#: page-templates/rates.php:58
+msgid "High occupancy"
+msgstr "Temporada alta"
+
+# @ _s
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "No hay resultados"
+
+# @ _s
+#: template-parts/content-none.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+# @ _s
+#: template-parts/content-none.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""

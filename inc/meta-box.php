@@ -128,6 +128,12 @@ function q_text_rates( $meta_boxes ) {
         'size'        => 15
       ),
       array(
+        'name'        => __( 'Tipo de cama', 'quechalen' ),
+        'id'          => 'rates_room_2_bed',
+        'type'        => 'text',
+        'size'        => 30
+      ),
+      array(
         'name'        => __( '2 personas', 'quechalen' ),
         'id'          => 'rates_inn_2_simple',
         'desc'        => __( 'Temporada Baja, camas simples', 'quechalen' ),
@@ -142,6 +148,12 @@ function q_text_rates( $meta_boxes ) {
         'type'        => 'text',
         'std'         => __( '', 'quechalen' ),
         'size'        => 15
+      ),
+      array(
+        'name'        => __( 'Tipo de cama', 'quechalen' ),
+        'id'          => 'rates_room_2_bed_single',
+        'type'        => 'text',
+        'size'        => 30
       ),
       array(
         'name'        => __( '3 personas', 'quechalen' ),
@@ -160,6 +172,12 @@ function q_text_rates( $meta_boxes ) {
         'size'        => 15
       ),
       array(
+        'name'        => __( 'Tipo de cama', 'quechalen' ),
+        'id'          => 'rates_room_3_bed',
+        'type'        => 'text',
+        'size'        => 30
+      ),
+      array(
         'name'        => __( '4 personas', 'quechalen' ),
         'id'          => 'rates_inn_4',
         'desc'        => __( 'Temporada Baja', 'quechalen' ),
@@ -174,6 +192,12 @@ function q_text_rates( $meta_boxes ) {
         'type'        => 'text',
         'std'         => __( '', 'quechalen' ),
         'size'        => 15
+      ),
+      array(
+        'name'        => __( 'Tipo de cama', 'quechalen' ),
+        'id'          => 'rates_room_4_bed',
+        'type'        => 'text',
+        'size'        => 30
       ),
     ),
   );
