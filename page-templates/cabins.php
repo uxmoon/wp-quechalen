@@ -17,6 +17,7 @@ get_header(); ?>
           <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
           <?php
+            $c = 0;
             $args = array (
               'posts_per_page' => -1,
               'post_type'      => q_cabin,
@@ -30,8 +31,12 @@ get_header(); ?>
 
               while ( have_posts() ) :
                 the_post();
+                  $c++;
+                  $classCurrent = ($c == 1) ? 'current' : '';
                   $slugName = $post->post_name;
-                  echo "<li class='tab-link' data-tab='tab-";
+                  echo "<li class='tab-link  ";
+                  echo $classCurrent;
+                  echo "' data-tab='tab-";
                   echo $slugName;
                   echo "'>";
                   the_title();
