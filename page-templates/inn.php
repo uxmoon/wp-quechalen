@@ -8,18 +8,45 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<?php
-			while ( have_posts() ) : the_post();
+      <?php while ( have_posts() ) : the_post(); ?>
 
-				get_template_part( 'template-parts/content', 'page' );
+      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <header class="entry-header">
+          <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+        </header><!-- .entry-header -->
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+        <div class="entry-content">
+          <div class="c-cabins">
+            <div class="c-cabins__content">
+              <?php the_content(); ?>
+            </div>
+            <div class="c-cabins__gallery">
+          <?php
+            $args = array (
+            'posts_per_page' => 1,
+            'post_type'      => q_inn,
+            );
 
-			endwhile; // End of the loop.
-			?>
+            query_posts( $args );
+
+          if ( have_posts() ):
+            while ( have_posts() ) :
+              the_post();
+                $images = rwmb_meta( 'quechalen_imgadv', 'type=image&size=thumbnail-gallery' );
+                foreach ( $images as $image ) {
+                  echo "\n<img src='{$image['url']}' alt='{$image['alt']}' />";
+                }
+            endwhile;
+          else:
+          // Insert any content or load a template for no posts found.
+          endif;
+          wp_reset_query(); ?>
+            </div>
+          </div>
+        </div><!-- .entry-content -->
+      </article><!-- #post-## -->
+
+      <?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

@@ -7,9 +7,11 @@
   .c-cabins {
     @include clearfix;
   }
+
   .c-cabins__content {
     @include span(5 of 12);
   }
+
   .c-cabins__gallery {
     @include span(7 of 12);
   }

@@ -85,6 +85,11 @@ p {
   }
 }
 
+.entry-header {
+  position: relative;
+  background-color: #f00;
+}
+
 .entry-content {
   background-color: rgba($color-brown, 0.8);
   padding: gutter() * 2;
@@ -273,4 +278,21 @@ p {
     display: none;
   }
 
+}
+
+
+.c-nav-inner {
+
+  @include breakpoint($bp-large) {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  margin: 0;
+  list-style-type: none;
+
+  li {
+    display: inline-block;
+  }
 }

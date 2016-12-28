@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Quechalen Cabins Theme 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2016-12-28 14:56-0300\n"
-"PO-Revision-Date: 2016-12-28 15:06-0300\n"
+"POT-Creation-Date: 2016-12-28 16:32-0300\n"
+"PO-Revision-Date: 2016-12-28 16:32-0300\n"
 "Last-Translator: Martin Luna <uxmoon@gmail.com>\n"
 "Language-Team: UX Moon <uxmoon@gmail.com>\n"
 "Language: es_ES\n"
@@ -36,11 +36,6 @@ msgid ""
 msgstr "Intenta con algunos de los vínculos del menú principal."
 
 # @ _s
-#: 404.php:33
-msgid "Most Used Categories"
-msgstr ""
-
-# @ _s
 #: comments.php:40 comments.php:61
 msgid "Comment navigation"
 msgstr ""
@@ -58,6 +53,14 @@ msgstr "Saltear al contenido"
 #: header.php:95
 msgid "Menu"
 msgstr "Menú"
+
+#: page-templates/facilities.php:17
+msgid "The complex"
+msgstr "El complejo"
+
+#: page-templates/facilities.php:18
+msgid "Our mission"
+msgstr "Misión y visión"
 
 #: page-templates/rates.php:25 page-templates/rates.php:41
 msgid "Low occupancy"

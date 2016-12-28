@@ -57,3 +57,9 @@ function quechalen_block_proxy_visits() {
 }
 add_action('after_setup_theme', 'quechalen_block_proxy_visits');
 
+
+function quechalen_thumbnail_sizes() {
+    add_image_size( 'thumbnail-gallery', 527, 424, true );
+}
+
+add_action( 'init', 'quechalen_thumbnail_sizes' );
