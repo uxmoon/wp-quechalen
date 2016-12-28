@@ -95,6 +95,10 @@ p {
     background-color: transparent;
   }
 
+  @include breakpoint($bp-mobile-only) {
+    margin-bottom: $base-spacing-unit;
+  }
+
   @include breakpoint($bp-large) {
 
     padding-left: 0;
@@ -249,4 +253,23 @@ p {
 
 .c-message {
   display: none;
+}
+
+
+.c-promotions__item {
+  margin-bottom: gutter();
+  border-bottom: 1px solid rgba($color-white, 0.5);
+
+  &:last-child {
+    margin-bottom: 0;
+    border-bottom-width: 0;
+  }
+}
+
+@include breakpoint($bp-large) {
+
+  .u-hide-for-large {
+    display: none;
+  }
+
 }

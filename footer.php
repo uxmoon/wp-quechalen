@@ -17,10 +17,12 @@
     <ul class="site-info-contact">
       <li>Los Mandarinos S/Nº. Carpintería. San Luis</li><li>Teléfono comercial (02656) 49-0117 / Particular (02656) 47.7288</li><li><a href="mailto:info@quechalen.com.ar">info@quechalen.com.ar</a></li>
     </ul>
-    <div class="site-info">
-      <span>&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>. Todos los derechos reservados.</span>
-      <a href="https://www.facebook.com/cabanas.quechalen"><svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg> facebook.com/cabanas.quechalen</a>
-    </div><!-- .site-info -->
+    <div class="site-footer__content">
+      <div class="site-info">
+        <span>&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>. Todos los derechos reservados.</span>
+        <a href="https://www.facebook.com/cabanas.quechalen"><svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg> facebook.com/cabanas.quechalen</a>
+      </div><!-- .site-info -->
+    </div>
   </footer><!-- #colophon -->
 </div><!-- #page -->
 

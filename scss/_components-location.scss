@@ -1,16 +1,6 @@
-.c-location {
-
-}
-
-.c-location__content {
-
-}
-
+// Hide map iframe for mobile
 .c-location__map {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  padding-bottom: 56.25%;
+  display: none;
 }
 
 @include breakpoint($bp-large) {
@@ -22,7 +12,12 @@
     @include span(4 of 12);
   }
   .c-location__map {
+    display: block;
     @include span(8 of 12);
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
 
     iframe {
       position: absolute;

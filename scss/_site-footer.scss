@@ -55,6 +55,10 @@
 
 }
 
+.site-footer__content {
+  background-color: $color-beige;
+}
+
 .site-info {
   @include container;
   @include clearfix;
