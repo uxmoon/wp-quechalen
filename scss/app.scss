@@ -87,7 +87,7 @@ p {
 
 .entry-header {
   position: relative;
-  background-color: #f00;
+  // background-color: #f00;
 }
 
 .entry-content {
@@ -209,6 +209,7 @@ p {
 @import "components-box";
 @import "components-location";
 @import "components-cabins";
+@import "components-facilities";
 
 // objects
 
@@ -294,5 +295,15 @@ p {
 
   li {
     display: inline-block;
+    cursor: pointer;
+  }
+
+}
+
+.tab-content {
+  display: none;
+
+  &.current {
+    display: block;
   }
 }

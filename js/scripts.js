@@ -11,4 +11,17 @@
 
   });
 
+  // Tabs - Based on https://codepen.io/cssjockey/pen/jGzuK
+
+  $('.c-nav-inner li').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('.c-nav-inner li').removeClass('current');
+    $('.tab-content').removeClass('current');
+
+    $(this).addClass('current');
+    $("#"+tab_id).addClass('current');
+  })
+
+
 } )( jQuery );

@@ -13,20 +13,36 @@ get_header(); ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
           <header class="entry-header">
             <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
             <ul class="c-nav-inner">
-              <li><a href="#tab1"><?php esc_html_e( 'The complex', 'quechalen' ); ?></a></li>
-              <li><a href="#tab2"><?php esc_html_e( 'Our mission', 'quechalen' ); ?></a></li>
+              <li class="current" data-tab="tab-1"><?php esc_html_e( 'The complex', 'quechalen' ); ?></li>
+              <li data-tab="tab-2"><?php esc_html_e( 'Our mission', 'quechalen' ); ?></li>
             </ul>
+
           </header><!-- .entry-header -->
           <div class="entry-content">
-            <div class="c-facilities">
-              <div class="c-facilities__content">
-                <?php the_content(); ?>
-              </div>
-              <div class="c-facilities__gallery">
-                <p>gallery</p>
+
+            <div id="tab-1" class="tab-content  current">
+              <div class="c-facilities">
+                <div class="c-facilities__content">
+                  <?php the_content(); ?>
+                </div>
+                <div class="c-facilities__gallery">
+                  <p>gallery</p>
+                </div>
               </div>
             </div>
+
+            <div id="tab-2" class="tab-content">
+              <?php echo rwmb_meta( 'facilities_intro' ); ?>
+
+              <h3><?php esc_html_e( 'Our mission', 'quechalen' ); ?></h3>
+              <?php echo rwmb_meta( 'facilities_mission' ); ?>
+
+              <h3><?php esc_html_e( 'Our Vision', 'quechalen' ); ?></h3>
+              <?php echo rwmb_meta( 'facilities_vision' ); ?>
+            </div>
+
           </div><!-- .entry-content -->
         </article><!-- #post-## -->
 

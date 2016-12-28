@@ -1,0 +1,19 @@
+.c-facilities {
+
+}
+
+@include breakpoint($bp-large) {
+
+  .c-facilities {
+    @include clearfix;
+  }
+
+  .c-facilities__content {
+    @include span(5 of 12);
+  }
+
+  .c-facilities__gallery {
+    @include span(7 of 12);
+  }
+
+}

@@ -203,3 +203,44 @@ function q_text_rates( $meta_boxes ) {
   );
   return $meta_boxes;
 }
+
+// Facilities - Mission and Vision
+
+add_filter( 'rwmb_meta_boxes', 'q_text_facilities' );
+function q_text_facilities( $meta_boxes ) {
+  $meta_boxes[] = array(
+    'title' => __( 'Misión y Visión', 'quechalen' ),
+    'pages' => 'page',
+    'show'  => array(
+      'relation' => 'OR',
+      'template' => 'page-templates/facilities.php',
+    ),
+    'fields' => array(
+      array(
+        'name'        => __( 'Intro', 'quechalen' ),
+        'id'          => 'facilities_intro',
+        'type'        => 'textarea',
+        'std'         => __( '', 'quechalen' ),
+        'rows'        => 5,
+        'cols'        => 5,
+      ),
+      array(
+        'name'        => __( 'Misión', 'quechalen' ),
+        'id'          => 'facilities_mission',
+        'type'        => 'textarea',
+        'std'         => __( '', 'quechalen' ),
+        'rows'        => 5,
+        'cols'        => 5,
+      ),
+      array(
+        'name'        => __( 'Visión', 'quechalen' ),
+        'id'          => 'facilities_vision',
+        'type'        => 'textarea',
+        'std'         => __( '', 'quechalen' ),
+        'rows'        => 5,
+        'cols'        => 5,
+      ),
+    ),
+  );
+  return $meta_boxes;
+}
