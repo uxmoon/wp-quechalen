@@ -70,20 +70,25 @@ get_header(); ?>
               while ( have_posts() ) :
                 the_post();
 
-                $c++;
-                $classCurrent = ($c == 1) ? 'current' : '';
-echo "\n<div id=\"tab-";
-echo $c;
-echo '" class="tab-content  ';
-echo $classCurrent;
-echo "\">";
-the_title();
+                  $c++;
+                  $classCurrent = ($c == 1) ? 'current' : '';
+
+                  echo "\n<div id=\"tab-";
+                  echo $c;
+                  echo '" class="tab-content  ';
+                  echo $classCurrent;
+                  echo "\">";
+                  echo "<div class=\"c-carousel\">";
+
                   $images = rwmb_meta( 'quechalen_imgadv', 'type=image&size=thumbnail-gallery' );
 
                   foreach ( $images as $image ) {
                     echo "\n<img src='{$image['url']}' alt='{$image['alt']}' />";
                   }
-echo "\n</div>";
+
+                  echo "\n</div>";
+                  echo "\n</div>";
+
               endwhile;
             else:
             // Insert any content or load a template for no posts found.

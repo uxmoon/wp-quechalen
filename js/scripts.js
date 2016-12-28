@@ -23,5 +23,7 @@
     $("#"+tab_id).addClass('current');
   })
 
+  $('.c-carousel').slick();
+
 
 } )( jQuery );
