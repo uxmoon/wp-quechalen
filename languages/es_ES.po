@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Quechalen Cabins Theme 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2016-12-28 14:56-0300\n"
-"PO-Revision-Date: 2016-12-28 14:58-0300\n"
+"PO-Revision-Date: 2016-12-28 15:06-0300\n"
 "Last-Translator: Martin Luna <uxmoon@gmail.com>\n"
 "Language-Team: UX Moon <uxmoon@gmail.com>\n"
 "Language: es_ES\n"
@@ -33,7 +33,7 @@ msgstr "No se encontró la pagina."
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
-msgstr ""
+msgstr "Intenta con algunos de los vínculos del menú principal."
 
 # @ _s
 #: 404.php:33
