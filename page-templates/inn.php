@@ -23,8 +23,8 @@ get_header(); ?>
             <div class="c-cabins__gallery">
           <?php
             $args = array (
-            'posts_per_page' => 1,
-            'post_type'      => q_inn,
+              'posts_per_page' => 1,
+              'post_type'      => q_inn,
             );
 
             query_posts( $args );

@@ -286,8 +286,9 @@ p {
 
   @include breakpoint($bp-large) {
     position: absolute;
-    top: 0;
+    top: 50%;
     right: 0;
+    @include transform(translateY(-50%));
   }
 
   margin: 0;
@@ -296,6 +297,14 @@ p {
   li {
     display: inline-block;
     cursor: pointer;
+    font-family: $font-dancing;
+    font-size: rem(35);
+    color: $color-white;
+    margin-right: $base-spacing-unit;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
 }
@@ -304,6 +313,6 @@ p {
   display: none;
 
   &.current {
-    display: block;
+    display: inherit;
   }
 }

@@ -15,31 +15,36 @@ get_header(); ?>
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <header class="entry-header">
           <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
           <?php
             $args = array (
-            'posts_per_page' => -1,
-            'post_type'      => q_cabin,
+              'posts_per_page' => -1,
+              'post_type'      => q_cabin,
             );
 
+
             query_posts( $args );
+            if ( have_posts() ):
 
-          if ( have_posts() ):
+              echo "<ul class=\"c-nav-inner\">";
 
-            echo "\n<ul class=\"c-nav-inner\">";
+              while ( have_posts() ) :
+                the_post();
+                  $slugName = $post->post_name;
+                  echo "<li class='tab-link' data-tab='tab-";
+                  echo $slugName;
+                  echo "'>";
+                  the_title();
+                echo "</li>";
+              endwhile;
 
-            while ( have_posts() ) :
-              the_post();
-                echo "\n<li><a href=\"#tab-" . $post->post_name . "\">";
-                the_title();
-                echo "</a></li>";
-            endwhile;
+              echo "</ul>";
 
-            echo "\n</ul>";
-
-          else:
-          // Insert any content or load a template for no posts found.
-          endif;
-          wp_reset_query(); ?>
+            else:
+            // Insert any content or load a template for no posts found.
+            endif;
+            wp_reset_query();
+          ?>
         </header><!-- .entry-header -->
 
         <div class="entry-content">
@@ -60,12 +65,12 @@ get_header(); ?>
             while ( have_posts() ) :
               the_post();
 
-the_title();
-$images = rwmb_meta( 'quechalen_imgadv', 'type=image&size=thumbnail-gallery' );
-foreach ( $images as $image ) {
-echo "\n<img src='{$image['url']}' alt='{$image['alt']}' />";
-}
-echo "<br><br>";
+                $images = rwmb_meta( 'quechalen_imgadv', 'type=image&size=thumbnail-gallery' );
+
+                foreach ( $images as $image ) {
+                  echo "\n<img src='{$image['url']}' alt='{$image['alt']}' />";
+                }
+
             endwhile;
           else:
           // Insert any content or load a template for no posts found.
