@@ -33,11 +33,10 @@ get_header(); ?>
                 the_post();
                   $c++;
                   $classCurrent = ($c == 1) ? 'current' : '';
-                  $slugName = $post->post_name;
-                  echo "<li class='tab-link  ";
+                  echo "<li class='";
                   echo $classCurrent;
                   echo "' data-tab='tab-";
-                  echo $slugName;
+                  echo $c;
                   echo "'>";
                   the_title();
                 echo "</li>";
@@ -59,6 +58,7 @@ get_header(); ?>
             </div>
             <div class="c-cabins__gallery">
           <?php
+            $c = 0;
             $args = array (
             'posts_per_page' => -1,
             'post_type'      => q_cabin,
@@ -66,21 +66,30 @@ get_header(); ?>
 
             query_posts( $args );
 
-          if ( have_posts() ):
-            while ( have_posts() ) :
-              the_post();
+            if ( have_posts() ):
+              while ( have_posts() ) :
+                the_post();
 
-                $images = rwmb_meta( 'quechalen_imgadv', 'type=image&size=thumbnail-gallery' );
+                $c++;
+                $classCurrent = ($c == 1) ? 'current' : '';
+echo "\n<div id=\"tab-";
+echo $c;
+echo '" class="tab-content  ';
+echo $classCurrent;
+echo "\">";
+the_title();
+                  $images = rwmb_meta( 'quechalen_imgadv', 'type=image&size=thumbnail-gallery' );
 
-                foreach ( $images as $image ) {
-                  echo "\n<img src='{$image['url']}' alt='{$image['alt']}' />";
-                }
-
-            endwhile;
-          else:
-          // Insert any content or load a template for no posts found.
-          endif;
-          wp_reset_query(); ?>
+                  foreach ( $images as $image ) {
+                    echo "\n<img src='{$image['url']}' alt='{$image['alt']}' />";
+                  }
+echo "\n</div>";
+              endwhile;
+            else:
+            // Insert any content or load a template for no posts found.
+            endif;
+            wp_reset_query();
+            ?>
             </div>
           </div>
         </div><!-- .entry-content -->
