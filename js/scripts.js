@@ -32,6 +32,36 @@
       mode: 'horizontal'
     });
 
+    // Source: https://wordpress.org/support/topic/replace-ajax-loader-with-font-awsome-spinner/
+
+    // Adding icon spinner, hidden by default
+    $( ".wpcf7-submit" ).after( '<svg class="icon icon-spinner animate-spin" style="visibility: hidden;"><use xlink:href="#icon-spinner"></use></svg>' );
+
+    // Show new spinner on Send button click
+    $('.wpcf7-submit').on('click', function () {
+        $('.icon-spinner').css({ visibility: 'visible' });
+    });
+
+    // Hide new spinner on result
+    $('.wpcf7').on('wpcf7:invalid wpcf7:spam wpcf7:mailsent wpcf7:mailfailed', function () {
+        $('.icon-spinner').css({ visibility: 'hidden' });
+    });
+
   });
+
+  // var modal = document.querySelector("#modal");
+  // var modalOverlay = document.querySelector("#modal-overlay");
+  // var closeButton = document.querySelector("#close-button");
+  // var openButton = document.querySelector("#open-button");
+
+  // closeButton.addEventListener("click", function() {
+  //   modal.classList.toggle("closed");
+  //   modalOverlay.classList.toggle("closed");
+  // });
+
+  // openButton.addEventListener("click", function() {
+  //   modal.classList.toggle("closed");
+  //   modalOverlay.classList.toggle("closed");
+  // });
 
 } )( jQuery );
