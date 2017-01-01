@@ -1,4 +1,9 @@
 body {
-  font-family: $helvetica;
+  font-family: $font-lato, $helvetica;
   background-color: $color-beige;
+}
+
+p {
+  font-size: rem(14);
+  line-height: $base-line-height;
 }
