@@ -37,6 +37,8 @@ get_header(); ?>
                   echo $classCurrent;
                   echo "' data-tab='tab-";
                   echo $c;
+                  echo "' id='tab-";
+                  echo $c;
                   echo "'>";
                   the_title();
                 echo "</li>";
