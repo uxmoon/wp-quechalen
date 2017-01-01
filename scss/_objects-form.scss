@@ -4,7 +4,7 @@ input[type="tel"],
 input[type="submit"],
 textarea {
   width: 100%;
-  margin-bottom: $base-spacing-unit / 2;
+  margin-top: $base-spacing-unit / 2;
   border-width: 1px;
   border-style: solid;
   border-color: $color-brown;
@@ -43,8 +43,10 @@ input[type="submit"] {
 }
 
 form select {
-  background-color: $color-white;
-  border: 1px solid $color-brown;
+  // background-color: $color-white;
+  // border: 1px solid $color-brown;
+  width: 100%;
+  font-size: rem(14);
 }
 
 
@@ -71,6 +73,7 @@ form select {
 .o-form ul {
   list-style-type: none;
   margin: 0;
+  margin-top: $base-spacing-unit / 2;
 
   li {
     display: inline-block;

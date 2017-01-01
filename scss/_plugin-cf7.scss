@@ -1,0 +1,96 @@
+.wpcf7 {
+  margin: 0;
+  padding: 0;
+}
+
+.wpcf7-response-output {
+  margin: rem(10) 0 0;
+  padding: rem(10) rem(15);
+  border-radius: rem(5);
+  @include span(12);
+}
+
+.wpcf7 .screen-reader-response {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.wpcf7-mail-sent-ok {
+  background-color: $color-cf7-green;
+  color: $color-white;
+}
+
+.wpcf7-mail-sent-ng {
+  background-color: $color-cf7-red;
+  color: $color-white;
+}
+
+.wpcf7-spam-blocked {
+  background-color: $color-cf7-orange;
+}
+
+.wpcf7-validation-errors {
+  background-color: $color-cf7-yellow;
+  color: $color-black;
+}
+
+.wpcf7-form-control-wrap {
+  position: relative;
+}
+
+span.wpcf7-not-valid-tip {
+  display: block;
+  padding: rem(5) rem(15);
+  background-color: $color-cf7-red;
+  color: $color-white;
+  font-size: rem(14);
+  line-height: 1;
+}
+
+.use-floating-validation-tip span.wpcf7-not-valid-tip {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  z-index: 100;
+  border: 1px solid $color-cf7-red;
+  background: $color-white;
+  padding: .2em .8em;
+}
+
+.wpcf7-display-none {
+  display: none;
+}
+
+.wpcf7 .c-form__cta {
+  position: relative;
+}
+
+.wpcf7 .ajax-loader {
+  display: none;
+}
+
+.wpcf7 .ajax-loader.is-active {
+  visibility: visible;
+}
+
+.wpcf7 .ajax-error {
+  display: none;
+}
+
+.wpcf7 .placeheld {
+  color: $color-black;
+}
+
+.wpcf7 .wpcf7-recaptcha iframe {
+  margin-bottom: 0;
+}
+
+.wpcf7 p {
+  margin-top: rem(10);
+}
