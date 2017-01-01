@@ -1,0 +1,20 @@
+.c-rates {
+  border-bottom: 1px solid $color-white;
+  margin-bottom: gutter();
+}
+
+@include breakpoint($bp-medium) {
+  .c-rates {
+    @include clearfix;
+    margin-left: gutter();
+    margin-right: gutter();
+  }
+
+  .c-rates__column {
+    @include span(3 of 12);
+
+    &:last-child {
+      @include span(6 of 12);
+    }
+  }
+}
