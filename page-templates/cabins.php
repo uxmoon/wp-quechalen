@@ -20,7 +20,7 @@ get_header(); ?>
             $c = 0;
             $args = array (
               'posts_per_page' => -1,
-              'post_type'      => q_cabin,
+              'post_type'      => 'q_cabin',
             );
 
 
@@ -63,7 +63,7 @@ get_header(); ?>
             $c = 0;
             $args = array (
             'posts_per_page' => -1,
-            'post_type'      => q_cabin,
+            'post_type'      => 'q_cabin',
             );
 
             query_posts( $args );

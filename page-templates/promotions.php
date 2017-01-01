@@ -19,7 +19,7 @@ get_header(); ?>
           <?php
             $args = array (
             'posts_per_page' => -1,
-            'post_type'      => q_promotions,
+            'post_type'      => 'q_promotions',
             );
 
             query_posts( $args );
