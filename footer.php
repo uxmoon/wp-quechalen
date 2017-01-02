@@ -26,6 +26,8 @@
   </footer><!-- #colophon -->
 </div><!-- #page -->
 
+<div class="modal-overlay" id="modal-overlay"></div>
+
 <?php wp_footer(); ?>
 
 </body>

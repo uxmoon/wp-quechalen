@@ -14,6 +14,15 @@ get_header(); ?>
 
         <div class="entry-content">
           <?php the_content(); ?>
+
+<!-- <div class="modal" id="modal">
+  <button class="close-button" id="close-button">Obvious Close Button</button>
+  <div class="modal-guts">
+
+
+  </div>
+</div> -->
+
         </div><!-- .entry-content -->
 
       </article><!-- #post-## -->
