@@ -17,10 +17,6 @@
 @import "elements-links";
 @import "elements-icons";
 
-// Slick
-@import "slick";
-@import "slick-theme";
-
 // Accessibility
 @import "accessibility";
 
@@ -60,6 +56,11 @@
 .c-message {
   display: none;
 }
+
+// Slick
+@import "slick";
+@import "slick-theme";
+@import "lightbox";
 
 // .modal {
 //   /* This way it could be display flex or grid or whatever also. */
