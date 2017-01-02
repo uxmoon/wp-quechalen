@@ -1,7 +1,3 @@
-.site-footer {
-  background-color: $color-black;
-}
-
 @include breakpoint($bp-mobile-only) {
 
   .site-footer {
