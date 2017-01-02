@@ -35,7 +35,10 @@ get_header(); ?>
                     echo "<div class=\"c-carousel\">";
                       $images = rwmb_meta( 'quechalen_imgadv', 'type=image&size=thumbnail-gallery' );
                       foreach ( $images as $image ) {
-                        echo "\n<img src='{$image['url']}' alt='{$image['alt']}' />";
+                        // echo "\n<img src='{$image['url']}' alt='{$image['alt']}' />";
+                        echo "\n<a href=\"{$image['full_url']}\" data-lightbox=\"";
+                        echo "gallery";
+                        echo "\"><img src=\"{$image['url']}\" alt=\"{$image['alt']}\" /></a>";
                       }
                   endwhile;
                     echo "\n</div>";
