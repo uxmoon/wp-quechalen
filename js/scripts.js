@@ -26,11 +26,7 @@
       $("#"+tab_id).addClass('current');
     })
 
-    // $('.c-carousel').slick();
-
-    $('.c-carousel').bxSlider({
-      mode: 'horizontal'
-    });
+    $('.c-carousel').slick();
 
     // Source: https://wordpress.org/support/topic/replace-ajax-loader-with-font-awsome-spinner/
 
