@@ -54,3 +54,13 @@ Single-colored icons can be modified like so:
 .icon-facebook {
   width: 0.587890625em;
 }
+
+.icon-spinner {
+  position: absolute;
+  top: 4px;
+  right: 10px;
+  z-index: 1;
+  fill: white;
+  width: 1.5em;
+  height: 1.5em;
+}

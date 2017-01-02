@@ -22,9 +22,12 @@ textarea {
 
 textarea {
   min-height: 134px;
+  margin-bottom: $base-spacing-unit / 2;
 }
 
 input[type="submit"] {
+  margin-top: 0;
+  margin-bottom: $base-spacing-unit / 2;
   border-width: 0;
   cursor: pointer;
   font-family: $font-fugaz;
@@ -96,4 +99,8 @@ form select {
     margin-bottom: 0;
   }
 
+}
+
+.o-form__cta {
+  position: relative;
 }
