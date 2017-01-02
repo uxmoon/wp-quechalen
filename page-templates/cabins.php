@@ -23,7 +23,6 @@ get_header(); ?>
               'post_type'      => 'q_cabin',
             );
 
-
             query_posts( $args );
             if ( have_posts() ):
 
@@ -33,15 +32,9 @@ get_header(); ?>
                 the_post();
                   $c++;
                   $classCurrent = ($c == 1) ? 'current' : '';
-                  echo "<li class='";
-                  echo $classCurrent;
-                  echo "' data-tab='tab-";
-                  echo $c;
-                  echo "' id='tab-";
-                  echo $c;
-                  echo "'>";
+                  echo "<li class=\"" . $classCurrent . "\" data-tab=\"tab-" . $c . "\">";
                   the_title();
-                echo "</li>";
+                  echo "</li>";
               endwhile;
 
               echo "</ul>";
@@ -85,7 +78,7 @@ get_header(); ?>
                   $images = rwmb_meta( 'quechalen_imgadv', 'type=image&size=thumbnail-gallery' );
 
                   foreach ( $images as $image ) {
-                    echo "\n<img src='{$image['url']}' alt='{$image['alt']}' />";
+                    echo "\n<img src=\"{$image['url']}\" alt=\"{$image['alt']}\" />";
                   }
 
                   echo "\n</div>";

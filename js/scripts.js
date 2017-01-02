@@ -2,7 +2,6 @@
 
   $(document).ready(function(){
 
-
     var navigationContainer = $('#site-navigation'),
       mainNavigation = navigationContainer.find('.c-anchor-nav ul');
 
@@ -11,11 +10,17 @@
       $(this).toggleClass('menu-is-open');
       //we need to remove the transitionEnd event handler (we add it when scolling up with the menu open)
       mainNavigation.off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend').toggleClass('is-visible');
+    });
 
+    // Slider
+    $('.c-carousel').slick({
+      dots: false,
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
     });
 
     // Tabs - Based on https://codepen.io/cssjockey/pen/jGzuK
-
     $('.c-nav-inner li').click(function(){
       var tab_id = $(this).attr('data-tab');
 
@@ -24,9 +29,8 @@
 
       $(this).addClass('current');
       $("#"+tab_id).addClass('current');
+      $("#"+tab_id+" .c-carousel").slick('setPosition');
     })
-
-    $('.c-carousel').slick();
 
     // Source: https://wordpress.org/support/topic/replace-ajax-loader-with-font-awsome-spinner/
 
