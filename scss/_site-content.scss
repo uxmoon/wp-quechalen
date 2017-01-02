@@ -55,7 +55,7 @@
 
 .entry-content {
   background-color: rgba($color-brown, 0.8);
-  padding: gutter() * 2;
+  // padding: gutter() * 2;
   color: $color-white;
   border-radius: $base-border-radius;
 
@@ -69,10 +69,10 @@
 
   @include breakpoint($bp-large) {
 
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: gutter();
-    padding-bottom: gutter();
+    // padding-left: 0;
+    // padding-right: 0;
+    // padding-top: gutter();
+    // padding-bottom: gutter();
 
     .page-template-home & {
       background-color: transparent;

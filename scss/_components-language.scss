@@ -1,7 +1,5 @@
-// Language Switcher
-
 .c-language {
-
+  @include clearfix;
   list-style-type: none;
   margin: 0;
 
@@ -19,10 +17,18 @@
   }
 
   li {
-    display: inline-block;
+    float: left;
     font-family: $font-lato;
-    font-size: rem(13);
+    font-size: rem(14);
     font-weight: 700;
+
+    &:last-child::before {
+      display: inline-block;
+      content: "\2014";
+      color: $color-white;
+      margin-left: rem(5);
+      margin-right: rem(5);
+    }
   }
 
 }

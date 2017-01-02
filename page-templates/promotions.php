@@ -35,6 +35,7 @@ get_header(); ?>
           // Insert any content or load a template for no posts found.
           endif;
           wp_reset_query(); ?>
+          <?php the_content() ?>
         </div><!-- .entry-content -->
       </article><!-- #post-## -->
 
