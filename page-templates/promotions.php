@@ -25,17 +25,21 @@ get_header(); ?>
             query_posts( $args );
 
           if ( have_posts() ):
+            echo "<div class=\"c-promotions\">";
             while ( have_posts() ) :
               the_post();
                 echo "\n<div class=\"c-promotions__item\">";
                 the_content();
                 echo "</div>";
             endwhile;
+            echo "</div>";
           else:
           // Insert any content or load a template for no posts found.
           endif;
           wp_reset_query(); ?>
-          <?php the_content() ?>
+          <div class="u-text-center">
+            <?php the_content() ?>
+          </div>
         </div><!-- .entry-content -->
       </article><!-- #post-## -->
 

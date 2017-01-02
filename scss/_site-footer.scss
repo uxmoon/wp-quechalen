@@ -1,4 +1,6 @@
-// Footer
+.site-footer {
+  background-color: $color-black;
+}
 
 @include breakpoint($bp-mobile-only) {
 
@@ -28,7 +30,7 @@
   @include breakpoint($bp-large) {
     position: relative;
     z-index: 1;
-    margin-top: -30px;
+    // margin-top: -30px;
 
     li {
       display: inline-block;
@@ -72,7 +74,7 @@
 
   span {
     color: $color-text-brown;
-    font-size: rem(12);
+    font-size: rem(13);
 
     @include breakpoint($bp-large) {
       float: left;
@@ -83,7 +85,7 @@
     display: block;
     color: $color-text-blue;
     text-decoration: none;
-    font-size: rem(12);
+    font-size: rem(13);
 
     @include breakpoint($bp-large) {
       float: right;

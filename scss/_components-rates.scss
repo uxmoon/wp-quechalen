@@ -6,8 +6,6 @@
 @include breakpoint($bp-medium) {
   .c-rates {
     @include clearfix;
-    margin-left: gutter();
-    margin-right: gutter();
   }
 
   .c-rates__column {
