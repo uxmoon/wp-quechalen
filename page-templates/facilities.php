@@ -28,7 +28,36 @@ get_header(); ?>
                   <?php the_content(); ?>
                 </div>
                 <div class="c-facilities__gallery">
-                  <p>gallery</p>
+                  <?php
+                    $args = array (
+                      'posts_per_page' => 1,
+                      'post_type'      => 'q_gallery',
+                      'page_id'        => 57
+                    );
+
+                    query_posts( $args );
+
+                    if ( have_posts() ):
+                      while ( have_posts() ) :
+                        the_post();
+
+                          echo "<div class=\"c-carousel\">";
+
+                          $images = rwmb_meta( 'quechalen_imgadv', 'type=image&size=thumbnail-gallery' );
+
+                          foreach ( $images as $image ) {
+
+                            echo "\n<a href=\"{$image['full_url']}\" data-lightbox=\"gallery\"><img src=\"{$image['url']}\" alt=\"{$image['alt']}\" /></a>";
+
+                          }
+
+                          echo "\n</div>";
+                      endwhile;
+                    else:
+                    // Insert any content or load a template for no posts found.
+                    endif;
+                    wp_reset_query();
+                  ?>
                 </div>
               </div>
             </div>

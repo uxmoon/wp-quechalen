@@ -54,9 +54,13 @@ get_header(); ?>
             <div class="c-cabins__gallery">
           <?php
             $c = 0;
+
+            $myArray = array('127','101','222');
+
             $args = array (
-            'posts_per_page' => -1,
-            'post_type'      => 'q_cabin',
+              'posts_per_page' => -1,
+              'post_type'      => 'q_gallery',
+              'post__in'       => $myArray
             );
 
             query_posts( $args );
@@ -68,22 +72,20 @@ get_header(); ?>
                   $c++;
                   $classCurrent = ($c == 1) ? 'current' : '';
 
-                  echo "\n<div id=\"tab-";
-                  echo $c;
-                  echo '" class="tab-content  ';
-                  echo $classCurrent;
-                  echo "\">";
-                  echo "<div class=\"c-carousel\">";
+                  echo "\n<div id=\"tab-{$c}\" class=\"tab-content  {$classCurrent}\">";
+
+                  echo "\n<div class=\"c-carousel\">";
 
                   $images = rwmb_meta( 'quechalen_imgadv', 'type=image&size=thumbnail-gallery' );
 
                   foreach ( $images as $image ) {
-                    echo "\n<a href=\"{$image['full_url']}\" data-lightbox=\"";
-                    echo "gallery";
-                    echo "{$c}\"><img src=\"{$image['url']}\" alt=\"{$image['alt']}\" /></a>";
+
+                    echo "\n<a href=\"{$image['full_url']}\" data-lightbox=\"gallery{$c}\"><img src=\"{$image['url']}\" alt=\"{$image['alt']}\" /></a>";
+
                   }
 
                   echo "\n</div>";
+
                   echo "\n</div>";
 
               endwhile;

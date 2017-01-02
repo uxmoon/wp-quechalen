@@ -22,9 +22,11 @@ get_header(); ?>
             </div>
             <div class="c-cabins__gallery">
               <?php
+
                 $args = array (
                   'posts_per_page' => 1,
-                  'post_type'      => 'q_inn',
+                  'post_type'      => 'q_gallery',
+                  'page_id'        => 145
                 );
 
                 query_posts( $args );
@@ -32,14 +34,21 @@ get_header(); ?>
                 if ( have_posts() ):
                   while ( have_posts() ) :
                     the_post();
+
                     echo "<div class=\"c-carousel\">";
+
                       $images = rwmb_meta( 'quechalen_imgadv', 'type=image&size=thumbnail-gallery' );
+
                       foreach ( $images as $image ) {
-                        // echo "\n<img src='{$image['url']}' alt='{$image['alt']}' />";
+
                         echo "\n<a href=\"{$image['full_url']}\" data-lightbox=\"";
+
                         echo "gallery";
+
                         echo "\"><img src=\"{$image['url']}\" alt=\"{$image['alt']}\" /></a>";
+
                       }
+
                   endwhile;
                     echo "\n</div>";
                 else:
