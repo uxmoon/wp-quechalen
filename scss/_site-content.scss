@@ -6,12 +6,7 @@
   position: relative;
 
   @include breakpoint($bp-large) {
-    // padding-bottom: 240px;
-
-    // // different padding because the bg image has a different height
-    // .page-template-cabins & {
-    //   padding-bottom: 130px;
-    // }
+    padding-bottom: 160px;
 
     .c-bottom {
       position: absolute;
@@ -24,6 +19,7 @@
       width: 100%;
       height: 237px;
     }
+
   }
 
 }

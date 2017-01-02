@@ -5,38 +5,44 @@
 
   @include breakpoint($bp-mobile-only) {
     background-size: cover;
+    background-image: url('../images/bg/bg-mobile.jpg');
   }
 
-  .page-template-home & {
-    background-image: url('../images/bg/bg-home.jpg');
-  }
+  @include breakpoint($bp-large) {
 
-  .page-template-cabins & {
-    background-image: url('../images/bg/bg-cabins.jpg');
-  }
+    .page-template-home & {
+      background-image: url('../images/bg/bg-home.jpg');
+    }
 
-  .page-template-contact & {
-    background-image: url('../images/bg/bg-contact.jpg');
-  }
+    .page-template-cabins & {
+      background-image: url('../images/bg/bg-cabins.jpg');
+      background-size: cover;
+    }
 
-  .page-template-facilities & {
-    background-image: url('../images/bg/bg-facilities.jpg');
-  }
+    .page-template-contact & {
+      background-image: url('../images/bg/bg-contact.jpg');
+    }
 
-  .page-template-inn & {
-    background-image: url('../images/bg/bg-inns.jpg');
-  }
+    .page-template-facilities & {
+      background-image: url('../images/bg/bg-facilities.jpg');
+    }
 
-  .page-template-location & {
-    background-image: url('../images/bg/bg-location.jpg');
-  }
+    .page-template-inn & {
+      background-image: url('../images/bg/bg-inns.jpg');
+    }
 
-  .page-template-promotions & {
-    background-image: url('../images/bg/bg-promotions.jpg');
-  }
+    .page-template-location & {
+      background-image: url('../images/bg/bg-location.jpg');
+    }
 
-  .page-template-rates & {
-    background-image: url('../images/bg/bg-rates.jpg');
+    .page-template-promotions & {
+      background-image: url('../images/bg/bg-promotions.jpg');
+    }
+
+    .page-template-rates & {
+      background-image: url('../images/bg/bg-rates.jpg');
+    }
+
   }
 
 }
