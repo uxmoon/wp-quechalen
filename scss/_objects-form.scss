@@ -73,6 +73,10 @@ form select {
   @include clearfix;
 }
 
+.o-form__content {
+  @include span(12);
+}
+
 .o-form ul {
   list-style-type: none;
   margin: 0;
@@ -90,6 +94,10 @@ form select {
 
 .o-form__column {
   margin-bottom: $base-spacing-unit;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @include breakpoint($bp-large) {

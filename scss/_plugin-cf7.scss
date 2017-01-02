@@ -7,7 +7,10 @@
   margin: rem(10) 0 0;
   padding: rem(10) rem(15);
   border-radius: rem(5);
-  @include span(12);
+
+  @include breakpoint($bp-medium) {
+    @include span(12);
+  }
 }
 
 .wpcf7 .screen-reader-response {
@@ -85,8 +88,4 @@ span.wpcf7-not-valid-tip {
 
 .wpcf7 .wpcf7-recaptcha iframe {
   margin-bottom: 0;
-}
-
-.wpcf7 p {
-  margin-top: rem(10);
 }
