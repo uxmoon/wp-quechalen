@@ -1,10 +1,3 @@
-// Component Message
-
-.c-message {
-  // margin-left: gutter();
-  // margin-right: gutter();
-}
-
 .c-message__title {
   @include clearfix;
   background-color: $color-white;
@@ -36,8 +29,6 @@
 
 }
 
-
-// rem
 .c-message__title-copy {
   font-size: rem(14);
   line-height: $base-line-height;
